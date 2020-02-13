@@ -2,7 +2,6 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import './menu-item.styles.scss';
 const MenuItem = ({title, imageUrl, size, location, history, match}) => {
-  console.log(location, match)
   return(
   <div className={`${size} menu-item`}>
     <div 
