@@ -25,16 +25,15 @@ class App extends React.Component {
           }
         })
       })}
-      this.setState({
+      else {this.setState({
         currentUser: userAuth
-      })
+      }) }
     })
   }
   componentWillUnmount(){
     this.unsubscribeFromAuth()
   }
   render(){
-    console.log(this.state.currentUser)
   return (
     <div>
      <Header currentUser={this.state.currentUser}/>
