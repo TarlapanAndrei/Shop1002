@@ -7,3 +7,7 @@ export const addItemToCart = item =>({
   type: cartActionsType.ADD_ITEM_TO_CARD,
   payload: item
 })
+export const minusAnItem = item =>({
+  type: cartActionsType.MINUS_AN_ITEM,
+  payload: item
+})

@@ -1,5 +1,5 @@
 import cartActionsType from './cart.types';
-import { addItemsToArray } from './utility.function';
+import { addItemsToArray, minusAnItemFromArray } from './utility.function';
 const INITIAL_STATE = {
   hiddenCart: true,
   cartItems: []
@@ -13,6 +13,10 @@ const cartReducer = (state=INITIAL_STATE, action) =>{
     case cartActionsType.ADD_ITEM_TO_CARD:
       return{
         ...state, cartItems: addItemsToArray(state.cartItems, action.payload)
+      }
+    case cartActionsType.MINUS_AN_ITEM:
+      return{
+        ...state, cartItems: minusAnItemFromArray(state.cartItems, action.payload)
       }
     default: return state;
       

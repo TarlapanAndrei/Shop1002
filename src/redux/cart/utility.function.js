@@ -12,3 +12,13 @@ export const addItemsToArray = (arrayForItems, itemToAdd) =>{
   }
   return arrayForItems;
 }
+export const minusAnItemFromArray = (arrayForItems, itemToMinus) =>{
+  if(itemToMinus.quantity > 1){
+   return arrayForItems.map(item => (
+      item.id === itemToMinus.id ? 
+      {...item, quantity: item.quantity -1} : item
+    ))
+  } else {
+    return arrayForItems.filter(item => item.id !== itemToMinus.id)
+  }
+}
