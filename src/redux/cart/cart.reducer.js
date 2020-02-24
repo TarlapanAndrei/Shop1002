@@ -18,6 +18,10 @@ const cartReducer = (state=INITIAL_STATE, action) =>{
       return{
         ...state, cartItems: minusAnItemFromArray(state.cartItems, action.payload)
       }
+    case cartActionsType.DELETE_AN_ITEM:
+      return{
+        ...state, cartItems: state.cartItems.filter(item => item.id !== action.payload.id)
+      }
     default: return state;
       
   }

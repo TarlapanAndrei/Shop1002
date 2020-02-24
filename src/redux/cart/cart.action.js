@@ -11,3 +11,7 @@ export const minusAnItem = item =>({
   type: cartActionsType.MINUS_AN_ITEM,
   payload: item
 })
+export const deleteAnItem = item =>({
+  type: cartActionsType.DELETE_AN_ITEM,
+  payload: item
+})
